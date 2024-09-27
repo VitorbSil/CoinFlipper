@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoinFlipper.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="padrao.png"
+                HeightRequest="200"
+                x:Name="ImageCoin" />
+
+            <Label
+                x:Name="ResultLabel" 
+                Text=""
+                />
+
+            <Picker x:Name="CoinPicker">
+                <Picker.Items>
+                    <x:String>Cara</x:String>
+                    <x:String>Coroa</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label
+                x:Name="AnswerLabel"
+                />
+
+            <Button
+                x:Name="FlipButton"
+                Text="Jogar" 
+
+                Clicked="FlipButton_Clicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
